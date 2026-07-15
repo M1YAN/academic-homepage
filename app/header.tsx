@@ -4,10 +4,10 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <header className="mb-8 flex items-center justify-between">
+    <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div>
         <Link href="/" className="font-medium text-black dark:text-white">
-          Julien Nim
+          Yan Mi (密言)
         </Link>
         <TextEffect
           as="p"
@@ -16,9 +16,20 @@ export function Header() {
           className="text-zinc-600 dark:text-zinc-500"
           delay={0.5}
         >
-          Design Engineer
+          Master Student · ICT, CAS
         </TextEffect>
       </div>
+      <nav className="flex flex-wrap gap-3 text-sm text-zinc-500 dark:text-zinc-400">
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#news">
+          News
+        </a>
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#publications">
+          Publications
+        </a>
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#connect">
+          Connect
+        </a>
+      </nav>
     </header>
   )
 }
