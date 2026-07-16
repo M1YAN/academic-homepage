@@ -44,7 +44,9 @@ const TRANSITION_SECTION = {
 }
 
 function renderInlineMarkdown(text: string): ReactNode[] {
-  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g)
+  const parts = text.split(
+    /(\*\*[^*]+\*\*|\*[^*]+\*|_[^_]+_|\[[^\]]+\]\([^)]+\))/g,
+  )
 
   return parts.map((part, index) => {
     const boldMatch = part.match(/^\*\*([^*]+)\*\*$/)
@@ -53,6 +55,15 @@ function renderInlineMarkdown(text: string): ReactNode[] {
         <strong key={index} className="font-medium text-zinc-900 dark:text-zinc-100">
           {boldMatch[1]}
         </strong>
+      )
+    }
+
+    const italicMatch = part.match(/^(?:\*([^*]+)\*|_([^_]+)_)$/)
+    if (italicMatch) {
+      return (
+        <em key={index} className="italic">
+          {italicMatch[1] ?? italicMatch[2]}
+        </em>
       )
     }
 
@@ -216,7 +227,7 @@ export default function Personal() {
                 {item.date}
               </p>
               <p className="text-zinc-700 dark:text-zinc-300">
-                {item.content}
+                {renderInlineMarkdown(item.content)}
               </p>
             </div>
           ))}

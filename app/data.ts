@@ -64,7 +64,7 @@ export const NEWS: NewsItem[] = [
   {
     date: '2026.01',
     content:
-      "Our paper Goal-Aware Identification and Rectification of Misinformation in Multi-Agent Systems was accepted by ICLR'26.",
+      "Our paper *Goal-Aware Identification and Rectification of Misinformation in Multi-Agent Systems* was accepted by **ICLR'26**.",
   },
 ]
 
