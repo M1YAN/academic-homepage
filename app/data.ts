@@ -56,7 +56,7 @@ export const PROFILE: Profile = {
     "Hi! I'm a 1st year Master student at the **Institute of Computing Technology, Chinese Academy of Sciences**, majoring in **Artificial Intelligence** and supervised by [Prof. Qi Cao](https://caoqi92.github.io/).",
   bio: '别赶路，去感受路。',
   location: 'Beijing, China',
-  avatar: '/images/avatar.jpg',
+  avatar: 'images/avatar.jpg',
   interests: ['LLM4Rec', 'Agent', 'Trustworthy AI'],
 }
 
@@ -76,7 +76,7 @@ export const PUBLICATIONS: Publication[] = [
       'Zherui Li, **Yan Mi**, Zhenhong Zhou, Houcheng Jiang, Guibin Zhang, Kun Wang, Junfeng Fang',
     venue: 'ICLR 2026',
     link: 'https://arxiv.org/abs/2506.00509',
-    image: '/images/argus.png',
+    image: 'images/argus.png',
     id: 'paper-argus',
   },
 ]
@@ -140,7 +140,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'CV',
-    link: '/pdf/CV-miyan-CN.pdf',
+    link: 'pdf/CV-miyan-CN.pdf',
   },
   {
     label: 'Github',
