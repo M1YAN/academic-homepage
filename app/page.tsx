@@ -310,20 +310,28 @@ export default function Personal() {
         <div className="flex flex-col space-y-2">
           {EDUCATION.map((education) => (
             <div
+              className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
               key={education.id}
-              className="rounded-2xl bg-zinc-50 p-4 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50"
             >
-              <div className="flex flex-col gap-1 sm:flex-row sm:justify-between">
-                <h4 className="font-normal dark:text-zinc-100">
-                  {education.school}
-                </h4>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                  {education.period}
-                </p>
+              <Spotlight
+                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                size={64}
+              />
+              <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                <div className="relative flex w-full flex-row justify-between gap-4">
+                  <div>
+                    <h4 className="font-normal dark:text-zinc-100">
+                      {education.school}
+                    </h4>
+                    <p className="text-zinc-500 dark:text-zinc-400">
+                      {education.description}
+                    </p>
+                  </div>
+                  <p className="shrink-0 text-right text-zinc-600 dark:text-zinc-400">
+                    {education.period}
+                  </p>
+                </div>
               </div>
-              <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-                {education.description}
-              </p>
             </div>
           ))}
         </div>
