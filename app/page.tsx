@@ -43,6 +43,38 @@ const TRANSITION_SECTION = {
   duration: 0.3,
 }
 
+function renderInlineMarkdown(text: string): ReactNode[] {
+  const parts = text.split(/(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g)
+
+  return parts.map((part, index) => {
+    const boldMatch = part.match(/^\*\*([^*]+)\*\*$/)
+    if (boldMatch) {
+      return (
+        <strong key={index} className="font-medium text-zinc-900 dark:text-zinc-100">
+          {boldMatch[1]}
+        </strong>
+      )
+    }
+
+    const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
+    if (linkMatch) {
+      return (
+        <a
+          key={index}
+          href={linkMatch[2]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 transition-colors hover:text-zinc-950 dark:hover:text-zinc-50"
+        >
+          {linkMatch[1]}
+        </a>
+      )
+    }
+
+    return part
+  })
+}
+
 function PublicationImage({ src, alt }: { src: string; alt: string }) {
   return (
     <MorphingDialog
@@ -140,13 +172,7 @@ export default function Personal() {
           />
           <div className="flex-1 space-y-3">
             <p className="text-zinc-600 dark:text-zinc-400">
-              Hi! I&apos;m a 1st year Master student at{' '}
-              <span className="font-medium text-zinc-900 dark:text-zinc-100">
-                the Institute of Computing Technology, Chinese Academy of
-                Sciences
-              </span>
-              , majoring in Artificial Intelligence and supervised by Prof. Qi
-              Cao.
+              {renderInlineMarkdown(PROFILE.about)}
             </p>
             <p className="text-sm text-zinc-500 dark:text-zinc-500">
               {PROFILE.bio} · {PROFILE.location}
@@ -230,7 +256,7 @@ export default function Personal() {
                     {paper.title}
                   </a>
                   <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                    {paper.authors}
+                    {renderInlineMarkdown(paper.authors)}
                   </p>
                 </div>
               </div>
@@ -245,20 +271,33 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <h3 className="mb-5 text-lg font-medium">Honors and Awards</h3>
-        <div className="flex flex-col space-y-2">
-          {AWARDS.map((award) => (
-            <div
-              key={award.id}
-              className="flex gap-4 rounded-xl px-3 py-2 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-900"
-            >
-              <p className="w-28 shrink-0 text-sm text-zinc-500 dark:text-zinc-400">
-                {award.date}
-              </p>
-              <p className="text-zinc-700 dark:text-zinc-300">
-                {award.title}
-              </p>
-            </div>
-          ))}
+        <div className="flex w-full flex-col">
+          <AnimatedBackground
+            enableHover
+            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+            transition={{
+              type: 'spring',
+              bounce: 0,
+              duration: 0.2,
+            }}
+          >
+            {AWARDS.map((award) => (
+              <div
+                key={award.id}
+                className="w-full rounded-xl"
+                data-id={award.id}
+              >
+                <div className="w-full space-y-1 px-3 py-3">
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                    {award.date}
+                  </p>
+                  <p className="text-zinc-700 dark:text-zinc-300">
+                    {award.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </AnimatedBackground>
         </div>
       </motion.section>
 

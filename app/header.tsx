@@ -26,6 +26,15 @@ export function Header() {
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#publications">
           Publications
         </a>
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#honors-and-awards">
+          Honors
+        </a>
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#educations">
+          Education
+        </a>
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#internships">
+          Internships
+        </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#connect">
           Connect
         </a>

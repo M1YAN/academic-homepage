@@ -1,6 +1,7 @@
 type Profile = {
   name: string
   title: string
+  about: string
   bio: string
   location: string
   avatar: string
@@ -51,9 +52,11 @@ type SocialLink = {
 export const PROFILE: Profile = {
   name: 'Yan Mi (密言)',
   title: '1st year Master student at ICT, CAS',
+  about:
+    "Hi! I'm a 1st year Master student at the **Institute of Computing Technology, Chinese Academy of Sciences**, majoring in **Artificial Intelligence** and supervised by [Prof. Qi Cao](https://caoqi92.github.io/).",
   bio: '别赶路，去感受路。',
   location: 'Beijing, China',
-  avatar: 'https://m1yan.github.io/personal-homepage/images/miyan-avatar-real.jpg',
+  avatar: '/images/avatar.jpg',
   interests: ['LLM4Rec', 'Agent', 'Trustworthy AI'],
 }
 
@@ -70,10 +73,10 @@ export const PUBLICATIONS: Publication[] = [
     title:
       'Goal-Aware Identification and Rectification of Misinformation in Multi-Agent Systems',
     authors:
-      'Zherui Li, Yan Mi, Zhenhong Zhou, Houcheng Jiang, Guibin Zhang, Kun Wang, Junfeng Fang',
+      'Zherui Li, **Yan Mi**, Zhenhong Zhou, Houcheng Jiang, Guibin Zhang, Kun Wang, Junfeng Fang',
     venue: 'ICLR 2026',
     link: 'https://arxiv.org/abs/2506.00509',
-    image: 'https://m1yan.github.io/personal-homepage/images/ARGUS.png',
+    image: '/images/argus.png',
     id: 'paper-argus',
   },
 ]
@@ -106,7 +109,7 @@ export const EDUCATION: Education[] = [
   {
     school: 'School of Future, Beijing University of Posts and Telecommunications',
     period: '2022.09 - 2026.06',
-    description: 'Undergraduate study before joining ICT, CAS.',
+    description: 'Bachelor study before joining ICT, CAS.',
     id: 'education-1',
   },
 ]
@@ -122,7 +125,7 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Alibaba Group (TAOBAO & TMALL Group)',
-    title: 'Intern, GUI-agent based User Simulation',
+    title: 'Research Intern, GUI-agent based User Simulation',
     start: '2025.12',
     end: '2026.08',
     link: 'https://www.alibabagroup.com/',
@@ -136,9 +139,29 @@ export const SOCIAL_LINKS: SocialLink[] = [
     link: 'https://scholar.google.com/citations?user=glEPK5kAAAAJ',
   },
   {
+    label: 'CV',
+    link: '/pdf/CV-miyan-CN.pdf',
+  },
+  {
     label: 'Github',
     link: 'https://github.com/M1YAN',
   },
+  {
+    label: 'Blog',
+    link: 'https://m1yan.github.io/',
+  },
+  {
+    label: 'Discord',
+    link: 'https://discordapp.com/users/m1yan.',
+  },
+  {
+    label: 'Instagram',
+    link: 'https://www.instagram.com/m1yan1024/',
+  },
+  {
+    label: 'RedNote',
+    link: 'https://www.xiaohongshu.com/user/profile/64295bea000000001102214b',
+  },
 ]
 
-export const EMAIL = 'miyan@bupt.edu.cn'
+export const EMAIL = 'yan.mi.0301@gmail.com'
