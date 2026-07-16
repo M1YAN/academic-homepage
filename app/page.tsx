@@ -369,11 +369,11 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
-        id="connect"
+        id="contact"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Connect</h3>
+        <h3 className="mb-5 text-lg font-medium">Contact</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>

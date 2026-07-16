@@ -20,23 +20,23 @@ export function Header() {
         </TextEffect>
       </div>
       <nav className="flex flex-wrap gap-3 text-sm text-zinc-500 dark:text-zinc-400">
-        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#news">
+        <a className="hidden transition-colors hover:text-zinc-950 sm:inline dark:hover:text-zinc-50" href="#news">
           News
         </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#publications">
           Publications
         </a>
-        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#honors-and-awards">
+        <a className="hidden transition-colors hover:text-zinc-950 sm:inline dark:hover:text-zinc-50" href="#honors-and-awards">
           Honors
         </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#educations">
-          Education
+          Educations
         </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#internships">
           Internships
         </a>
-        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#connect">
-          Connect
+        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#contact">
+          Contact
         </a>
       </nav>
     </header>
