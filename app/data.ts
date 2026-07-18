@@ -125,12 +125,13 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
   },
   {
     company: 'Alibaba Group (TAOBAO & TMALL Group)',
-    title: 'Research Intern, GUI-agent based User Simulation',
+    title: 'Research Intern (Recommendation Algorithm) - Taobao Homepage Feeds', // 英文组合方式
+    // title: '研究型实习生 (推荐算法工程师) - 淘宝首页信息流', // 中文组合方式
     start: '2025.12',
     end: '2026.08',
     link: 'https://www.alibabagroup.com/',
     id: 'work2',
-  },
+  }
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
