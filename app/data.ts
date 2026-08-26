@@ -56,7 +56,7 @@ export const PROFILE: Profile = {
     "Hi! I'm a 1st year Master student at the **Institute of Computing Technology, Chinese Academy of Sciences**, majoring in **Artificial Intelligence** and supervised by [Prof. Qi Cao](https://caoqi92.github.io/).",
   bio: '别赶路，去感受路。',
   location: 'Beijing, China',
-  avatar: 'images/avatar_new.jpg',
+  avatar: 'images/avatar_singapore.jpg',
   interests: ['LLM4Rec', 'Agent', 'Trustworthy AI'],
 }
 
