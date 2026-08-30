@@ -145,11 +145,11 @@ function AvatarImage({ src, alt }: { src: string; alt: string }) {
         />
       </MorphingDialogTrigger>
       <MorphingDialogContainer>
-        <MorphingDialogContent className="relative max-w-[90vw] rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+        <MorphingDialogContent className="relative size-[min(80vh,90vw)] rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
           <MorphingDialogImage
             src={src}
             alt={alt}
-            className="max-h-[80vh] w-full rounded-xl object-contain"
+            className="h-full w-full rounded-xl object-contain"
           />
         </MorphingDialogContent>
         <MorphingDialogClose
