@@ -128,6 +128,48 @@ function PublicationImage({ src, alt }: { src: string; alt: string }) {
   )
 }
 
+function AvatarImage({ src, alt }: { src: string; alt: string }) {
+  return (
+    <MorphingDialog
+      transition={{
+        type: 'spring',
+        bounce: 0,
+        duration: 0.3,
+      }}
+    >
+      <MorphingDialogTrigger className="h-28 w-28 shrink-0 overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-900">
+        <MorphingDialogImage
+          src={src}
+          alt={alt}
+          className="h-full w-full cursor-zoom-in object-cover ring-1 ring-zinc-200/70 dark:ring-zinc-800"
+        />
+      </MorphingDialogTrigger>
+      <MorphingDialogContainer>
+        <MorphingDialogContent className="relative max-w-[90vw] rounded-2xl bg-zinc-50 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950 dark:ring-zinc-800/50">
+          <MorphingDialogImage
+            src={src}
+            alt={alt}
+            className="max-h-[80vh] w-full rounded-xl object-contain"
+          />
+        </MorphingDialogContent>
+        <MorphingDialogClose
+          className="fixed top-6 right-6 h-fit w-fit rounded-full bg-white p-1"
+          variants={{
+            initial: { opacity: 0 },
+            animate: {
+              opacity: 1,
+              transition: { delay: 0.3, duration: 0.1 },
+            },
+            exit: { opacity: 0, transition: { duration: 0 } },
+          }}
+        >
+          <XIcon className="h-5 w-5 text-zinc-500" />
+        </MorphingDialogClose>
+      </MorphingDialogContainer>
+    </MorphingDialog>
+  )
+}
+
 function MagneticSocialLink({
   children,
   link,
@@ -176,10 +218,9 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-          <img
+          <AvatarImage
             src={PROFILE.avatar}
             alt={PROFILE.name}
-            className="h-24 w-24 rounded-2xl object-cover ring-1 ring-zinc-200/70 dark:ring-zinc-800"
           />
           <div className="flex-1 space-y-3">
             <p className="text-zinc-600 dark:text-zinc-400">
