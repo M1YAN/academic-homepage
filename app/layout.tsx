@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
 import { Header } from './header'
 import { Footer } from './footer'
@@ -24,16 +23,6 @@ export const metadata: Metadata = {
     'Yan Mi is a Master student at ICT, CAS, working on LLM4Rec, Agent, and Trustworthy AI.',
 }
 
-const geist = Geist({
-  variable: '--font-geist',
-  subsets: ['latin'],
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-})
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,16 +30,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geist.variable} ${geistMono.variable} bg-white tracking-tight antialiased dark:bg-zinc-950`}
-      >
+      <body className="bg-white tracking-tight antialiased dark:bg-zinc-950">
         <ThemeProvider
           enableSystem={true}
           attribute="class"
           storageKey="theme"
           defaultTheme="system"
         >
-          <div className="flex min-h-screen w-full flex-col font-[family-name:var(--font-inter-tight)]">
+          <div className="flex min-h-screen w-full flex-col">
             <div className="relative mx-auto w-full max-w-3xl flex-1 px-3 pt-20 sm:px-4">
               <Header />
               {children}
