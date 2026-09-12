@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div>
-        <Link href="/" className="font-medium text-black dark:text-white">
+        <Link href="/" className="text-xl font-bold leading-tight text-black dark:text-white">
           Yan Mi (密言)
         </Link>
         <TextEffect

@@ -23,6 +23,14 @@ export const metadata: Metadata = {
     'Yan Mi is a Master student at ICT, CAS, working on LLM4Rec, Agent, and Trustworthy AI.',
 }
 
+const lastUpdated =
+  process.env.LAST_UPDATED ??
+  new Intl.DateTimeFormat('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(new Date())
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -38,10 +46,10 @@ export default function RootLayout({
           defaultTheme="system"
         >
           <div className="flex min-h-screen w-full flex-col">
-            <div className="relative mx-auto w-full max-w-3xl flex-1 px-3 pt-20 sm:px-4">
+            <div className="relative mx-auto w-full max-w-4xl flex-1 px-3 pt-20 sm:px-4">
               <Header />
               {children}
-              <Footer />
+              <Footer lastUpdated={lastUpdated} />
             </div>
           </div>
         </ThemeProvider>

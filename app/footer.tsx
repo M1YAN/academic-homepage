@@ -66,13 +66,14 @@ function ThemeSwitch() {
   )
 }
 
-export function Footer() {
+export function Footer({ lastUpdated }: { lastUpdated: string }) {
   return (
     <footer className="mt-24 border-t border-zinc-100 px-0 py-4 dark:border-zinc-800">
       <div className="flex items-center justify-between">
         <a href="https://github.com/M1YAN" target="_blank">
           <TextLoop className="text-xs text-zinc-500">
             <span>© 2026 Yan Mi.</span>
+            <span>Last updated: {lastUpdated}.</span>
             <span>Built with Nim and Motion-Primitives.</span>
           </TextLoop>
         </a>

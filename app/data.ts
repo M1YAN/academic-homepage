@@ -16,6 +16,7 @@ type NewsItem = {
 type Publication = {
   title: string
   authors: string
+  contribution?: string
   venue: string
   link: string
   image: string
@@ -53,7 +54,7 @@ export const PROFILE: Profile = {
   name: 'Yan Mi (密言)',
   title: '1st year Master student at ICT, CAS',
   about:
-    "Hi! I'm a 1st year Master student at the **Institute of Computing Technology, Chinese Academy of Sciences**, majoring in **Artificial Intelligence** and supervised by [Prof. Qi Cao](https://caoqi92.github.io/).",
+    "Hi! I'm a 1st year Master student at the **Institute of Computing Technology, Chinese Academy of Sciences**, majoring in **Artificial Intelligence** and supervised by [Prof. Qi Cao](https://caoqi92.github.io/). I received my bachelor's degree from the **School of Future, Beijing University of Posts and Telecommunications**.",
   bio: '别赶路，去感受路。',
   location: 'Beijing, China',
   avatar: 'images/avatar_singapore.jpg',
@@ -79,6 +80,17 @@ export const PUBLICATIONS: Publication[] = [
     image: 'images/argus.png',
     id: 'paper-argus',
   },
+  {
+    title:
+      'Towards Faithful Simulation of Human Shopping Behavior',
+    authors:
+      'Jiakai Tang†, **Yan Mi†**, Jing Yu†, Yang Zhang, See-Kiong Ng, Qi Cao, Fei Sun, Xu Chen, Wen Chen, Jian Wu, Han Zhu, Bo Zheng',
+    contribution: '† Equal contribution.',
+    venue: 'Preprint',
+    link: 'https://arxiv.org/abs/2608.20707',
+    image: 'images/recverse-cropped.png',
+    id: 'paper-recverse',
+  }
 ]
 
 export const AWARDS: Award[] = [
@@ -165,4 +177,4 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
 ]
 
-export const EMAIL = 'yan.mi.0301@gmail.com'
+export const EMAIL = 'its.yanmi@gmail.com'

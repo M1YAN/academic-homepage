@@ -207,7 +207,7 @@ function MagneticSocialLink({
 export default function Personal() {
   return (
     <motion.main
-      className="space-y-12 sm:space-y-16"
+      className="space-y-8 sm:space-y-10"
       variants={VARIANTS_CONTAINER}
       initial="hidden"
       animate="visible"
@@ -248,7 +248,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-lg font-medium">News</h3>
+        <h3 className="mb-3 text-xl font-bold tracking-tight">News</h3>
         <AnimatedBackground
           enableHover
           className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
@@ -280,7 +280,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Publications</h3>
+        <h3 className="mb-5 text-xl font-bold tracking-tight">Publications</h3>
         <div className="flex flex-col space-y-4">
           {PUBLICATIONS.map((paper) => (
             <div
@@ -310,6 +310,11 @@ export default function Personal() {
                   <p className="text-sm text-zinc-500 dark:text-zinc-400">
                     {renderInlineMarkdown(paper.authors)}
                   </p>
+                  {paper.contribution && (
+                    <p className="text-xs text-zinc-400 dark:text-zinc-500">
+                      {paper.contribution}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>
@@ -322,7 +327,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Honors and Awards</h3>
+        <h3 className="mb-5 text-xl font-bold tracking-tight">Honors and Awards</h3>
         <div className="flex w-full flex-col">
           <AnimatedBackground
             enableHover
@@ -358,7 +363,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Educations</h3>
+        <h3 className="mb-5 text-xl font-bold tracking-tight">Educations</h3>
         <div className="flex flex-col space-y-2">
           {EDUCATION.map((education) => (
             <div
@@ -394,7 +399,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Internships</h3>
+        <h3 className="mb-5 text-xl font-bold tracking-tight">Internships</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <a
@@ -433,7 +438,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-lg font-medium">Contact</h3>
+        <h3 className="mb-5 text-xl font-bold tracking-tight">Contact</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>
