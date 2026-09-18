@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'motion/react'
+import Image from 'next/image'
 import type { ReactNode } from 'react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
@@ -52,7 +53,10 @@ function renderInlineMarkdown(text: string): ReactNode[] {
     const boldMatch = part.match(/^\*\*([^*]+)\*\*$/)
     if (boldMatch) {
       return (
-        <strong key={index} className="font-medium text-zinc-900 dark:text-zinc-100">
+        <strong
+          key={index}
+          className="font-medium text-zinc-900 dark:text-zinc-100"
+        >
           {boldMatch[1]}
         </strong>
       )
@@ -218,10 +222,7 @@ export default function Personal() {
         transition={TRANSITION_SECTION}
       >
         <div className="flex flex-col gap-6 sm:flex-row sm:items-center">
-          <AvatarImage
-            src={PROFILE.avatar}
-            alt={PROFILE.name}
-          />
+          <AvatarImage src={PROFILE.avatar} alt={PROFILE.name} />
           <div className="flex-1 space-y-3">
             <p className="text-zinc-600 dark:text-zinc-400">
               {renderInlineMarkdown(PROFILE.about)}
@@ -291,10 +292,10 @@ export default function Personal() {
                 className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
                 size={96}
               />
-              <div className="relative grid gap-4 rounded-[15px] bg-white p-4 dark:bg-zinc-950 sm:grid-cols-[160px_1fr]">
+              <div className="relative grid gap-4 rounded-[15px] bg-white p-4 sm:grid-cols-[160px_1fr] dark:bg-zinc-950">
                 <div className="relative">
                   <PublicationImage src={paper.image} alt={paper.title} />
-                  <span className="absolute left-2 top-2 rounded-full bg-zinc-950 px-2 py-1 text-xs text-zinc-50 dark:bg-zinc-50 dark:text-zinc-950">
+                  <span className="absolute top-2 left-2 rounded-full bg-zinc-950 px-2 py-1 text-xs text-zinc-50 dark:bg-zinc-50 dark:text-zinc-950">
                     {paper.venue}
                   </span>
                 </div>
@@ -303,7 +304,7 @@ export default function Personal() {
                     href={paper.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-normal leading-snug text-zinc-900 underline-offset-4 transition-colors hover:underline dark:text-zinc-100"
+                    className="leading-snug font-normal text-zinc-900 underline-offset-4 transition-colors hover:underline dark:text-zinc-100"
                   >
                     {paper.title}
                   </a>
@@ -327,7 +328,9 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-xl font-bold tracking-tight">Honors and Awards</h3>
+        <h3 className="mb-5 text-xl font-bold tracking-tight">
+          Honors and Awards
+        </h3>
         <div className="flex w-full flex-col">
           <AnimatedBackground
             enableHover
@@ -414,16 +417,27 @@ export default function Personal() {
                 size={64}
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                <div className="relative flex w-full flex-row justify-between gap-4">
-                  <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {job.title}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
-                      {job.company}
-                    </p>
+                <div className="relative flex w-full flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+                  <div className="flex min-w-0 items-center gap-4">
+                    <div className="flex h-16 w-28 shrink-0 items-center justify-center">
+                      <Image
+                        src={job.logo}
+                        alt={job.logoAlt}
+                        width={112}
+                        height={64}
+                        className="max-h-full w-auto max-w-full object-contain dark:drop-shadow-[0_0_1px_rgba(255,255,255,0.7)]"
+                      />
+                    </div>
+                    <div className="min-w-0">
+                      <h4 className="font-normal dark:text-zinc-100">
+                        {job.title}
+                      </h4>
+                      <p className="text-zinc-500 dark:text-zinc-400">
+                        {job.company}
+                      </p>
+                    </div>
                   </div>
-                  <p className="shrink-0 text-right text-zinc-600 dark:text-zinc-400">
+                  <p className="shrink-0 pl-32 text-left text-zinc-600 sm:pl-0 sm:text-right dark:text-zinc-400">
                     {job.start} - {job.end}
                   </p>
                 </div>

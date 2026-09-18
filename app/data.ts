@@ -42,6 +42,8 @@ type WorkExperience = {
   start: string
   end: string
   link: string
+  logo: string
+  logoAlt: string
   id: string
 }
 
@@ -57,7 +59,7 @@ export const PROFILE: Profile = {
     "Hi! I'm a 1st year Master student at the **Institute of Computing Technology, Chinese Academy of Sciences**, majoring in **Artificial Intelligence** and supervised by [Prof. Qi Cao](https://caoqi92.github.io/). I received my bachelor's degree from the **School of Future, Beijing University of Posts and Telecommunications**.",
   bio: '别赶路，去感受路。',
   location: 'Beijing, China',
-  avatar: 'images/avatar_singapore.jpg',
+  avatar: 'images/avatar_singapore.png',
   interests: ['LLM4Rec', 'Agent', 'Trustworthy AI'],
 }
 
@@ -81,8 +83,7 @@ export const PUBLICATIONS: Publication[] = [
     id: 'paper-argus',
   },
   {
-    title:
-      'Towards Faithful Simulation of Human Shopping Behavior',
+    title: 'Towards Faithful Simulation of Human Shopping Behavior',
     authors:
       'Jiakai Tang†, **Yan Mi†**, Jing Yu†, Yang Zhang, See-Kiong Ng, Qi Cao, Fei Sun, Xu Chen, Wen Chen, Jian Wu, Han Zhu, Bo Zheng',
     contribution: '† Equal contribution.',
@@ -90,7 +91,7 @@ export const PUBLICATIONS: Publication[] = [
     link: 'https://arxiv.org/abs/2608.20707',
     image: 'images/recverse-cropped.png',
     id: 'paper-recverse',
-  }
+  },
 ]
 
 export const AWARDS: Award[] = [
@@ -119,7 +120,8 @@ export const AWARDS: Award[] = [
 
 export const EDUCATION: Education[] = [
   {
-    school: 'School of Future, Beijing University of Posts and Telecommunications',
+    school:
+      'School of Future, Beijing University of Posts and Telecommunications',
     period: '2022.09 - 2026.06',
     description: 'Bachelor study before joining ICT, CAS.',
     id: 'education-1',
@@ -133,6 +135,8 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: '2025.02',
     end: '2026.06',
     link: 'https://www.ict.ac.cn/',
+    logo: 'images/ict-logo-transparent.png',
+    logoAlt: 'Institute of Computing Technology, CAS logo',
     id: 'work1',
   },
   {
@@ -142,8 +146,10 @@ export const WORK_EXPERIENCE: WorkExperience[] = [
     start: '2025.12',
     end: '2026.08',
     link: 'https://www.alibabagroup.com/',
+    logo: 'images/alibaba_logo.png',
+    logoAlt: 'Alibaba logo',
     id: 'work2',
-  }
+  },
 ]
 
 export const SOCIAL_LINKS: SocialLink[] = [
