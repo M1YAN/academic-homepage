@@ -159,7 +159,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   },
   {
     label: 'CV',
-    link: 'pdf/CV-miyan-CN.pdf',
+    link: 'pdf/CV-miyan-EN.pdf',
   },
   {
     label: 'Github',
