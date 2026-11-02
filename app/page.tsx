@@ -249,7 +249,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-3 text-xl font-bold tracking-tight">News</h3>
+        <h3 className="mb-3 text-xl font-extrabold tracking-tight">News</h3>
         <AnimatedBackground
           enableHover
           className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
@@ -281,7 +281,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-xl font-bold tracking-tight">Publications</h3>
+        <h3 className="mb-5 text-xl font-extrabold tracking-tight">Publications</h3>
         <div className="flex flex-col space-y-4">
           {PUBLICATIONS.map((paper) => (
             <div
@@ -324,49 +324,11 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
-        id="honors-and-awards"
-        variants={VARIANTS_SECTION}
-        transition={TRANSITION_SECTION}
-      >
-        <h3 className="mb-5 text-xl font-bold tracking-tight">
-          Honors and Awards
-        </h3>
-        <div className="flex w-full flex-col">
-          <AnimatedBackground
-            enableHover
-            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-            transition={{
-              type: 'spring',
-              bounce: 0,
-              duration: 0.2,
-            }}
-          >
-            {AWARDS.map((award) => (
-              <div
-                key={award.id}
-                className="w-full rounded-xl"
-                data-id={award.id}
-              >
-                <div className="w-full space-y-1 px-3 py-3">
-                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
-                    {award.date}
-                  </p>
-                  <p className="text-zinc-700 dark:text-zinc-300">
-                    {award.title}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </AnimatedBackground>
-        </div>
-      </motion.section>
-
-      <motion.section
         id="educations"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-xl font-bold tracking-tight">Educations</h3>
+        <h3 className="mb-5 text-xl font-extrabold tracking-tight">Educations</h3>
         <div className="flex flex-col space-y-2">
           {EDUCATION.map((education) => (
             <div
@@ -379,14 +341,9 @@ export default function Personal() {
               />
               <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
                 <div className="relative flex w-full flex-row justify-between gap-4">
-                  <div>
-                    <h4 className="font-normal dark:text-zinc-100">
-                      {education.school}
-                    </h4>
-                    <p className="text-zinc-500 dark:text-zinc-400">
-                      {education.description}
-                    </p>
-                  </div>
+                  <h4 className="font-normal dark:text-zinc-100">
+                    {education.school}
+                  </h4>
                   <p className="shrink-0 text-right text-zinc-600 dark:text-zinc-400">
                     {education.period}
                   </p>
@@ -402,7 +359,7 @@ export default function Personal() {
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-xl font-bold tracking-tight">Internships</h3>
+        <h3 className="mb-5 text-xl font-extrabold tracking-tight">Internships</h3>
         <div className="flex flex-col space-y-2">
           {WORK_EXPERIENCE.map((job) => (
             <a
@@ -448,11 +405,49 @@ export default function Personal() {
       </motion.section>
 
       <motion.section
+        id="honors-and-awards"
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3 className="mb-5 text-xl font-extrabold tracking-tight">
+          Honors and Awards
+        </h3>
+        <div className="flex w-full flex-col">
+          <AnimatedBackground
+            enableHover
+            className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
+            transition={{
+              type: 'spring',
+              bounce: 0,
+              duration: 0.2,
+            }}
+          >
+            {AWARDS.map((award) => (
+              <div
+                key={award.id}
+                className="w-full rounded-xl"
+                data-id={award.id}
+              >
+                <div className="w-full space-y-1 px-3 py-3">
+                  <p className="text-sm text-zinc-500 dark:text-zinc-400">
+                    {award.date}
+                  </p>
+                  <p className="text-zinc-700 dark:text-zinc-300">
+                    {award.title}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </AnimatedBackground>
+        </div>
+      </motion.section>
+
+      <motion.section
         id="contact"
         variants={VARIANTS_SECTION}
         transition={TRANSITION_SECTION}
       >
-        <h3 className="mb-5 text-xl font-bold tracking-tight">Contact</h3>
+        <h3 className="mb-5 text-xl font-extrabold tracking-tight">Contact</h3>
         <p className="mb-5 text-zinc-600 dark:text-zinc-400">
           Feel free to contact me at{' '}
           <a className="underline dark:text-zinc-300" href={`mailto:${EMAIL}`}>

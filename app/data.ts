@@ -32,7 +32,6 @@ type Award = {
 type Education = {
   school: string
   period: string
-  description: string
   id: string
 }
 
@@ -92,6 +91,53 @@ export const PUBLICATIONS: Publication[] = [
     image: 'images/recverse-cropped.png',
     id: 'paper-recverse',
   },
+  {
+    title: 'Omni-Safety under Cross-Modality Conflict: Vulnerabilities, Dynamics Mechanisms and Efficient Alignment',
+    authors:
+      'Kun Wang, Zherui Li, Zhenhong Zhou, Yitong Zhang, **Yan Mi**, Kun Yang, Yiming Zhang, Junhao Dong, Zhongxiang Sun, Qiankun Li, Yang Liu',
+    venue: 'NeurIPS 2026',
+    link: 'https://arxiv.org/abs/2602.10161',
+    image: 'images/omni-safety.png',
+    id: 'paper-omni-safety',
+  },
+]
+
+export const EDUCATION: Education[] = [
+  {
+    school: 'Institute of Computing Technology, Chinese Academy of Sciences',
+    period: '2026.09 - Present',
+    id: 'education-2',
+  },
+  {
+    school:
+      'School of Future, Beijing University of Posts and Telecommunications',
+    period: '2022.09 - 2026.06',
+    id: 'education-1',
+  },
+]
+
+export const WORK_EXPERIENCE: WorkExperience[] = [
+  {
+    company: 'Institute of Computing Technology, Chinese Academy of Sciences',
+    title: 'Research Intern',
+    start: '2025.02',
+    end: '2026.06',
+    link: 'https://www.ict.ac.cn/',
+    logo: 'images/ict-logo-transparent.png',
+    logoAlt: 'Institute of Computing Technology, CAS logo',
+    id: 'work1',
+  },
+  {
+    company: 'Alibaba Group (TAOBAO & TMALL Group)',
+    title: 'Research Intern (Recommendation Algorithm) - RecGPT Team', // 英文组合方式
+    // title: '研究型实习生 (推荐算法工程师) - 淘宝首页信息流', // 中文组合方式
+    start: '2025.12',
+    end: '2026.08',
+    link: 'https://www.alibabagroup.com/',
+    logo: 'images/alibaba_logo.png',
+    logoAlt: 'Alibaba logo',
+    id: 'work2',
+  },
 ]
 
 export const AWARDS: Award[] = [
@@ -115,40 +161,6 @@ export const AWARDS: Award[] = [
     date: '2025.10',
     title: 'Academic Scholarship in BUPT',
     id: 'award-4',
-  },
-]
-
-export const EDUCATION: Education[] = [
-  {
-    school:
-      'School of Future, Beijing University of Posts and Telecommunications',
-    period: '2022.09 - 2026.06',
-    description: 'Bachelor study before joining ICT, CAS.',
-    id: 'education-1',
-  },
-]
-
-export const WORK_EXPERIENCE: WorkExperience[] = [
-  {
-    company: 'Institute of Computing Technology, Chinese Academy of Sciences',
-    title: 'Research Intern',
-    start: '2025.02',
-    end: '2026.06',
-    link: 'https://www.ict.ac.cn/',
-    logo: 'images/ict-logo-transparent.png',
-    logoAlt: 'Institute of Computing Technology, CAS logo',
-    id: 'work1',
-  },
-  {
-    company: 'Alibaba Group (TAOBAO & TMALL Group)',
-    title: 'Research Intern (Recommendation Algorithm) - Taobao Homepage Feeds', // 英文组合方式
-    // title: '研究型实习生 (推荐算法工程师) - 淘宝首页信息流', // 中文组合方式
-    start: '2025.12',
-    end: '2026.08',
-    link: 'https://www.alibabagroup.com/',
-    logo: 'images/alibaba_logo.png',
-    logoAlt: 'Alibaba logo',
-    id: 'work2',
   },
 ]
 

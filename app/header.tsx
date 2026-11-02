@@ -6,7 +6,7 @@ export function Header() {
   return (
     <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div>
-        <Link href="/" className="text-xl font-bold leading-tight text-black dark:text-white">
+        <Link href="/" className="text-xl font-extrabold leading-tight text-black dark:text-white">
           Yan Mi (密言)
         </Link>
         <TextEffect
@@ -26,14 +26,14 @@ export function Header() {
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#publications">
           Publications
         </a>
-        <a className="hidden transition-colors hover:text-zinc-950 sm:inline dark:hover:text-zinc-50" href="#honors-and-awards">
-          Honors
-        </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#educations">
           Educations
         </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#internships">
           Internships
+        </a>
+        <a className="hidden transition-colors hover:text-zinc-950 sm:inline dark:hover:text-zinc-50" href="#honors-and-awards">
+          Honors
         </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#contact">
           Contact

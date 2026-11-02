@@ -17,8 +17,9 @@
 
   body {
     font-family:
-      'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC',
-      system-ui, sans-serif;
+      -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'SF Pro Display',
+      system-ui, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei',
+      'Noto Sans CJK SC', sans-serif;
   }
 
   @media (min-width: 640px) {
