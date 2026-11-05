@@ -2,7 +2,7 @@
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
-import { XIcon } from 'lucide-react'
+import { ArrowUpRightIcon, XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
 import { Magnetic } from '@/components/ui/magnetic'
 import { AnimatedBackground } from '@/components/ui/animated-background'
@@ -18,6 +18,7 @@ import {
   AWARDS,
   EDUCATION,
   EMAIL,
+  FRIEND_LINKS,
   NEWS,
   PROFILE,
   PUBLICATIONS,
@@ -439,6 +440,53 @@ export default function Personal() {
               </div>
             ))}
           </AnimatedBackground>
+        </div>
+      </motion.section>
+
+      <motion.section
+        id="collaborators"
+        aria-labelledby="collaborators-heading"
+        variants={VARIANTS_SECTION}
+        transition={TRANSITION_SECTION}
+      >
+        <h3
+          id="collaborators-heading"
+          className="mb-5 text-xl font-extrabold tracking-tight"
+        >
+          Collaborators
+        </h3>
+        <div className="grid gap-3 sm:grid-cols-2">
+          {FRIEND_LINKS.map((friend) => (
+            <a
+              key={friend.link}
+              href={friend.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] focus-visible:outline-2 focus-visible:outline-offset-4 dark:bg-zinc-600/30"
+            >
+              <Spotlight
+                className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
+                size={96}
+              />
+              <div className="relative h-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
+                <div className="mb-2 flex items-center justify-between gap-3">
+                  <h4 className="font-medium text-zinc-900 dark:text-zinc-100">
+                    {friend.name}
+                  </h4>
+                  <ArrowUpRightIcon
+                    aria-hidden="true"
+                    className="h-4 w-4 shrink-0 text-zinc-400 transition-colors group-hover:text-zinc-950 dark:group-hover:text-zinc-50"
+                  />
+                </div>
+                <p className="text-sm text-zinc-600 dark:text-zinc-400">
+                  {friend.relationship}
+                </p>
+                <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-500">
+                  {friend.affiliation}
+                </p>
+              </div>
+            </a>
+          ))}
         </div>
       </motion.section>
 

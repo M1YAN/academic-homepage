@@ -51,6 +51,13 @@ type SocialLink = {
   link: string
 }
 
+type FriendLink = {
+  name: string
+  relationship: string
+  affiliation: string
+  link: string
+}
+
 export const PROFILE: Profile = {
   name: 'Yan Mi (密言)',
   title: '1st year Master student at ICT, CAS',
@@ -192,6 +199,21 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'RedNote',
     link: 'https://www.xiaohongshu.com/user/profile/64295bea000000001102214b',
+  },
+]
+
+export const FRIEND_LINKS: FriendLink[] = [
+  {
+    name: 'Zherui Li',
+    relationship: 'Good friend & collaborator',
+    affiliation: 'PhD student · NTU',
+    link: 'https://zhrli324.github.io/',
+  },
+  {
+    name: 'Yu Mi',
+    relationship: 'My Twin brother',
+    affiliation: "Master's student · ZJU",
+    link: 'https://miyu0403.github.io/',
   },
 ]
 
