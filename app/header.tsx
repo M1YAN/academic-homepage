@@ -35,7 +35,7 @@ export function Header() {
         <a className="hidden transition-colors hover:text-zinc-950 sm:inline dark:hover:text-zinc-50" href="#honors-and-awards">
           Honors
         </a>
-        <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#collaborators">
+        <a className="hidden transition-colors hover:text-zinc-950 sm:inline dark:hover:text-zinc-50" href="#collaborators">
           Collaborators
         </a>
         <a className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-50" href="#contact">
